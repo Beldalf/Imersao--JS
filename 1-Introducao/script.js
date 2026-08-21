@@ -1,0 +1,1 @@
+console.log("Hellow world do script.js");
