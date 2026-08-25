@@ -85,11 +85,12 @@ console.log("____________  Exercicios_Chatgpt  ___________________");
   console.log("  Eu gosto de Python  ".trim()); //String + trim( para remover espaços em branco no início e no final da string)
 
   console.log("JavaScript".slice(0, 4)); //String + slice( para pegar a palavra da posição que você quer)
+
+  console.log(
+    "Meu nome é " +
+      prompt("Digite seu nome:") +
+      " e possuo " +
+      prompt("Digite sua idade:") +
+      " anos.",
+  ); //String + prompt( para abrir uma janela para o usuario digitar algo)
 }
-console.log(
-  "Meu nome é " +
-    prompt("Digite seu nome:") +
-    " e possuo " +
-    prompt("Digite sua idade:") +
-    " anos.",
-); //String + prompt( para abrir uma janela para o usuario digitar algo)
