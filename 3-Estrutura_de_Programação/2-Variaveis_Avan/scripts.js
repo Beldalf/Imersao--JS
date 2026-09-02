@@ -5,3 +5,5 @@ const ip = "192.206.166";
 console.log(nome);
 
 console.log(ip);
+
+//A variavel const = uma variavel imutavel

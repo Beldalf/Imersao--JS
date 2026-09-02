@@ -14,3 +14,13 @@ let um = 1,
   treis = 3;
 
 console.log(um + dois + treis);
+
+// EXERCICIOS //
+
+let nume = "Gabriel";
+let idade = 23;
+let vivo = true;
+
+let sobrenome = "Beorm",
+  telefone = 123456789,
+  Paulistano = true;
