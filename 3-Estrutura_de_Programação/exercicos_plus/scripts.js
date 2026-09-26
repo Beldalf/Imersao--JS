@@ -222,91 +222,95 @@
 //   }
 // }
 
-// let quantidade = 0;
-// ((soma = 0), (subtracao = 0), (media = 0), (numP = 0), (numN = 0));
-// let maiorN;
-// let menorN;
-// while (true) {
-//   let numero = Number(prompt("Digite os numeros"));
-//   if (numero === 0) {
-//     console.log("Programa encerrado");
-//     break;
-//   } else if (numero > 0) {
-//     (quantidade++, (soma = soma + numero), numP++);
-//   } else if (numero < 0) {
-//     (quantidade++, numN++, (subtracao = soma - numero));
-//   } else if (numero || maiorN) {
-//     maiorN = numero;
-//   } else if (numero || menorN) {
-//     menorN = numero;
-//     console.log(`${numeros}`);
-//   }
-// }
-// media = soma / quantidade;
-// console.log(`Quantidade de números:${quantidade} \n
-// Soma:${soma} \n
-// Média:${media}\n
-// Maior número:${maiorN}\n
-// Menor número:${menorN}\n
-// Quantidade de positivos:${numP}\n
-// Quantidade de negativos:${numN}`);
-
-/// resolução antigravity
-{
-  let quantidade = 0;
-  let soma = 0;
-  let numP = 0; // Quantidade de positivos
-  let numN = 0; // Quantidade de negativos
-  let maiorN;
-  let menorN;
-
-  while (true) {
-    let numero = Number(prompt("Digite um número (ou 0 para encerrar):"));
-
-    // Condição de parada (0 encerra o programa)
-    if (numero === 0) {
-      console.log("Programa encerrado");
-      break;
-    }
-
-    // 1. Atualiza quantidade e soma (para QUALQUER número diferente de 0)
-    quantidade++;
-    soma = soma + numero;
-
-    // 2. Conta se é positivo ou negativo
-    if (numero > 0) {
-      numP++;
-    } else if (numero < 0) {
-      numN++;
-    }
-
-    // 3. Define o maior e o menor número
-    // Se for o primeiro número digitado, ele é tanto o maior quanto o menor
-    if (quantidade === 1) {
-      maiorN = numero;
-      menorN = numero;
-    } else {
-      if (numero > maiorN) {
-        maiorN = numero;
-      }
-      if (numero < menorN) {
-        menorN = numero;
-      }
-    }
+let quantidade = 0;
+((soma = 0), (media = 0), (numP = 0), (numN = 0));
+let maiorN;
+let menorN;
+while (true) {
+  let numero = Number(prompt("Digite os numeros"));
+  if (numero === 0) {
+    console.log("Programa encerrado");
+    break;
+  } else if (numero > 0) {
+    (quantidade++, (soma = soma + numero), numP++);
+    console.log(`${numero}`);
+  } else if (numero < 0) {
+    (quantidade++, numN++, (soma = soma + numero));
+    console.log(`${numero}`);
   }
-
-  // Calcula a média apenas se algum número foi digitado (evita divisão por zero)
-  let media = quantidade > 0 ? soma / quantidade : 0;
-
-  // Exibição dos resultados finais
-  console.log(`Quantidade de números: ${quantidade}`);
-  console.log(`Soma: ${soma}`);
-  console.log(`Média: ${media}`);
-  console.log(`Maior número: ${maiorN !== undefined ? maiorN : "Nenhum"}`);
-  console.log(`Menor número: ${menorN !== undefined ? menorN : "Nenhum"}`);
-  console.log(`Quantidade de positivos: ${numP}`);
-  console.log(`Quantidade de negativos: ${numN}`);
+  if (maiorN === undefined || numero > maiorN) {
+    maiorN = numero;
+  }
+  if (menorN === undefined || numero < menorN) {
+    menorN = numero;
+  }
 }
+
+media = soma / quantidade;
+console.log(`Quantidade de números:${quantidade} \n
+Soma:${soma} \n
+Média:${media}\n
+Maior número:${maiorN}\n
+Menor número:${menorN}\n
+Quantidade de positivos:${numP}\n
+Quantidade de negativos:${numN}`);
+
+// /// resolução antigravity
+// {
+//   let quantidade = 0;
+//   let soma = 0;
+//   let numP = 0; // Quantidade de positivos
+//   let numN = 0; // Quantidade de negativos
+//   let maiorN;
+//   let menorN;
+
+//   while (true) {
+//     let numero = Number(prompt("Digite um número (ou 0 para encerrar):"));
+
+//     // Condição de parada (0 encerra o programa)
+//     if (numero === 0) {
+//       console.log("Programa encerrado");
+//       break;
+//     }
+
+//     // 1. Atualiza quantidade e soma (para QUALQUER número diferente de 0)
+//     quantidade++;
+//     soma = soma + numero;
+
+//     // 2. Conta se é positivo ou negativo
+//     if (numero > 0) {
+//       numP++;
+//     } else if (numero < 0) {
+//       numN++;
+//     }
+
+//     // 3. Define o maior e o menor número
+//     // Se for o primeiro número digitado, ele é tanto o maior quanto o menor
+//     if (quantidade === 1) {
+//       maiorN = numero;
+//       menorN = numero;
+//     } else {
+//       if (numero > maiorN) {
+//         maiorN = numero;
+//       }
+//       if (numero < menorN) {
+//         menorN = numero;
+//       }
+//     }
+//   }
+
+//   // Calcula a média apenas se algum número foi digitado (evita divisão por zero)
+//   let media = quantidade > 0 ? soma / quantidade : 0;
+
+//   // Exibição dos resultados finais
+//   console.log(`Quantidade de números: ${quantidade}`);
+//   console.log(`Soma: ${soma}`);
+//   console.log(`Média: ${media}`);
+//   console.log(`Maior número: ${maiorN !== undefined ? maiorN : "Nenhum"}`);
+//   console.log(`Menor número: ${menorN !== undefined ? menorN : "Nenhum"}`);
+//   console.log(`Quantidade de positivos: ${numP}`);
+//   console.log(`Quantidade de negativos: ${numN}`);
+// }
 
 // }
 // //Final}
