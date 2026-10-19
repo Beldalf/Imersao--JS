@@ -13,12 +13,12 @@ function soma(x, y) {
 }
 console.log(soma(3, 2));
 
-function ale() {
-  console.log(Math.random());
+function ale(num) {
+  return Math.floor(Math.random() * num) + 1;
 }
 
-ale();
-ale();
+console.log(ale(50));
+console.log(ale(15));
 
 function maiorIdade(idade) {
   if (idade >= 18) {
